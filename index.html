@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Tetris</title>
+		<style>
+			@font-face {
+				font-family: tmb;
+				src: url("DS-DIGIB.TTF") format("TrueType")
+			}
+			span{
+				font-family: tmb;
+				font-size: 20pt;
+				color: green;
+			}
+			.container{
+				width: 360px;
+				border: 1px solid black;
+				background: #ff9;
+				font-size: 13pt;
+				padding-bottom: 8px;
+			}
+			.clearfix::after {
+    			clear: both;
+			}
+			.clearfix:before, .clearfix:after{
+				content:'.';
+				display:block;
+				overflow:hidden;
+				visibility:hidden;
+				font-size:0;
+				line-height:0;
+				width:0;
+				height:0;
+			}
+		</style>
+		<script type="text/javascript" src="js/tetris.js" ></script>
+	</head>
+	<body>
+		<header>
+			<h2>俄罗斯方块</h2>
+		</header>	
+		<div class="container clearfix">
+			<div style="float: left;">
+				&nbsp;速度:<span id="curSpeedEle"></span>
+				当前积分:<span id="curScoreEle"></span>
+			</div>
+			<div style="float: right;">
+				最高积分:<span id="maxScoreEle"></span>
+			</div>
+		</div>
+	</body>
+</html>
